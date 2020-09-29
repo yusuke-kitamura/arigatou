@@ -59,3 +59,4 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 # 画像サイズ変更用
 gem "refile-mini_magick"
+gem 'jquery-rails'
