@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
+		if @post.save
+			redirect_to posts_path, notice: "successfuly posted"
+		end
 	end
 
 	def index
