@@ -1,11 +1,13 @@
 <div class = "container">
 	<div class = "row">
-		<%= @user.name %>
-	</div>
+		<div class = "col-xs-3">
+			<%= @user.name %>
+		</div>
 
-	<div class = "row">
-		<% @posts.each do |post| %>
-			<%= post.content %>
-		<% end %>
+		<div class = "col-xs-9">
+			<% @posts.each do |post| %>
+				<%= post.content %>
+			<% end %>
+		</div>
 	</div>
 </div>
