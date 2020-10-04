@@ -18,4 +18,9 @@ class UsersController < ApplicationController
 		@user.destroy
 		redirect_to root_path, notice: "succesfully deleted"
 	end
+
+	private
+	def user_params
+		params.require(:user).permit(:name, :user_image_id, :email)
+	end
 end
