@@ -1,13 +1,12 @@
 class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
-		if @post.save
-			redirect_to posts_path, notice: "successfuly posted"
-		end
+		@post.save(post_params)
+		redirect_to posts_path, notice: "successfuly posted"
 	end
 
 	def index
-		@user = cuurent_user
+		@user = current_user
 		@posts = Post.all
 	end
 
