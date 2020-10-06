@@ -6,9 +6,11 @@
 		</div>
 
 		<div class = "col-xs-9">
-			<% @posts.each do |post| %>
-				<%= post.content %>
-			<% end %>
+			<table>
+				<% @posts.each do |post| %>
+					<%= post.content %>
+				<% end %>
+			</table>
 		</div>
 	</div>
 </div>
