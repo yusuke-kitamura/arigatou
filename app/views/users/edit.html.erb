@@ -1,5 +1,13 @@
 <h2>Edit User</h2>
 
 <%= form_with model: @user, url: {controller: 'users', action: 'update' },local: true do |f| %>
+	<div class="field">
+	    <%= f.label :name %><br />
+	    <%= f.email_field :name, autofocus: true, autocomplete: "NAME" %>
+  	</div>
 
+	<div class="field">
+	    <%= f.label :email %><br />
+	    <%= f.email_field :email, autofocus: true, autocomplete: "EMAIL" %>
+  	</div>
 <% end %>
